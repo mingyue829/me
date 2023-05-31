@@ -7,5 +7,6 @@ Look on the course website for how to do this, and for how to run the tests.
 https://design-computing.github.io/md/week1
 
 """
-x = str("Hello Ben")
-print(x)
+print("Hello world")
+
+
