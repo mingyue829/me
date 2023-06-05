@@ -18,14 +18,14 @@ import platform
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
-
+# I think this will print words from this list
 for word in some_words:
-    print(word)
-
+    print(word) # it printed ["what", "does", "this", "line", "do", "?"]
+# I think this will print a word from list
 for x in some_words:
-    print(x)
+    print(x) # it printed ["what", "does", "this", "line", "do", "?"]
 
-print(some_words)
+print(some_words) # it printed ["what", "does", "this", "line", "do", "?"]
 
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
