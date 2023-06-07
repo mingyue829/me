@@ -99,8 +99,8 @@ def shout_with_a_number(a_string, a_number):
     the_answer = shouted_string + ' ' +str(a_number)
     return the_answer
 
-shouted_string = shout(a_string)
-the_answer = "{} {}" .format(shouted_string, a_number)
+#shouted_string = shout(a_string)
+#the_answer = "{} {}" .format(shouted_string, a_number)
 
 
 

@@ -24,9 +24,9 @@ for word in some_words:
 # I think this will print a word from list
 for x in some_words:
     print(x) # it printed ["what", "does", "this", "line", "do", "?"]
-
+# I think this will print a word from list
 print(some_words) # it printed ["what", "does", "this", "line", "do", "?"]
-
+# I think this will print a word from the list that contains more than 3 alphabet
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
 
