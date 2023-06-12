@@ -132,11 +132,20 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+    #str(number)
+    #lista = []
+    #for i in range(10):
+        #listb = []
+        #for ii in range(10):
+            #listb.append("")
+        #lista.append(listb)
+    #return lista
+
     lista = []
     for i in range(10):
         listb = []
-        for ii in range(10):
-            listb.append(i)
+        for _ in range(10):
+            listb.append(str(i))
         lista.append(listb)
     return lista
 
@@ -161,7 +170,7 @@ def loops_4():
     for i in range(10):
         listb = []
         for ii in range(10):
-            listb.append(ii)
+            listb.append(str(ii))
         lista.append(listb)
     return lista
 
@@ -231,7 +240,7 @@ def loops_6():
     for i in range(10):
         listb = []
         for j in range(i+1):
-            listb.append(j)
+            listb.append(str(j))
         lista.append(listb)
     return lista
 
@@ -261,11 +270,11 @@ def loops_7():
     for i in range(5):
         listb = []
         for j in range(4 - i):
-            listb.append('')
-        for j in range(4 - i, 4 - i + 1 + 2 * i):
+            listb.append(" ")
+        for j in range(2 * i + 1):
             listb.append("*")
-        for j in range(4 - i + 1 + 2 * i + 1, 10):
-            listb.append('')
+        for j in range(4 - i):
+            listb.append(" ")
         lista.append(listb)
     return lista
 
