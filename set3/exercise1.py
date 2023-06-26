@@ -58,7 +58,7 @@ def stubborn_asker(low, high):
     while True:
         number = int(input("Enter a number between {} and {}: ".format(low, high)))
         if low <= number <= high:
-        return number
+            return number
     else:
         print("Number is outside the bounds. Try again.")
 
