@@ -29,7 +29,56 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
-    return "You got it!"
+import random
+
+
+def get_integer_input(prompt):
+    """Get an integer input from the user and handle non-integer inputs."""
+    while True:
+        try:
+            value = int(input(prompt))
+            return value
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+
+
+def advancedGuessingGame():
+    """Play a guessing game with a user.
+
+    The game allows for a specified lower and upper bound for guessing.
+    It handles non-integer inputs, numbers outside the bounds, and other failure modes.
+    """
+
+    print("Welcome to the Advanced Guessing Game!")
+    lower_bound = get_integer_input("Enter the lower bound: ")
+    upper_bound = get_integer_input("Enter the upper bound: ")
+    
+    # Validate bounds
+    if lower_bound >= upper_bound:
+        print("Invalid bounds. The lower bound must be smaller than the upper bound.")
+        return
+
+    # Generate a random number within the specified range
+    secret_number = random.randint(lower_bound, upper_bound)
+    
+    while True:
+        guess = get_integer_input(f"Guess a number between {lower_bound} and {upper_bound}: ")
+        
+        if guess < lower_bound or guess > upper_bound:
+            print("Out of bounds! Guess within the specified range.")
+            continue
+        
+        if guess == secret_number:
+            return "You got it!"
+        elif guess < secret_number:
+            print("Too low! Try again.")
+        else:
+            print("Too high! Try again.")
+
+
+if __name__ == "__main__":
+    print(advancedGuessingGame())
+"You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
