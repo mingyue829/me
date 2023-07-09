@@ -1,1 +1,1 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+TODO: Reflect on what you learned this week and what is still unclear.This week I have learnt how to open another file and getting out information needed out of that file. Some tips, when opening another file, need to use return{} to make sure it is closed afterwards.
