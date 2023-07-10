@@ -145,37 +145,38 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    pass
+    file = open(LOCAL + "/Trispokedovetiles(laser).gcode" , "r")
+    number = 0
+    for line in file:
+        if "M10 P1" in line:
+            number += 1
 
+    with open(LOCAL + "/lasers.pew" , "w") as lasers:
+        # lasers = open(LOCAL + "/lasers.pew" , "w")
+        lasers.write(str(number))
+        # lasers.close()
 
 if __name__ == "__main__":
     functions = [
-        object
-        for name, object in inspect.getmembers(sys.modules[__name__])
-        if  (inspect.getmembers(object))
+        obj
+        for name, obj in inspect.getmembers(sys.modules[__name__])
+        if (inspect.isfunction(obj))
     ]
     for function in functions:
-        try: 
+        try:
             print(function())
-        except Exception as i:
-            print(i)
+        except Exception as e:
+            print(e)
     if not os.path.isfile("lasers.pew"):
         print("diarist did not create lasers.pew")
 
-    wp = wordy_pyramid()
-    [print(f"{word} {len(word)}") for word in wp]
-
-    print(pokedex(low=3, high=7))
-
-    diarist()
-
-    in_root = os.path.isfile("lasers.pew")
-    in_set4 = os.path.isfile("set4/lasers.pew")
-    if not in_set4 and not in_root:
-        print("diarist did not create lasers.pew")
-    elif not in_set4 and in_root:
-        print(
-            "diarist did create lasers.pew, but in the me folder, it should be in the set4 folder"
-        )
-    elif in_set4:
-        print("lasers.pew is in the right place")
+    # in_root = os.path.isfile("lasers.pew")
+    # in_set4 = os.path.isfile("set4/lasers.pew")
+    # if not in_set4 and not in_root:
+    #     print("diarist did not create lasers.pew")
+    # elif not in_set4 and in_root:
+    #     print(
+    #         "diarist did create lasers.pew, but in the me folder, it should be in the set4 folder"
+    #     )
+    # elif in_set4:
+    #     print("lasers.pew is in the right place")
