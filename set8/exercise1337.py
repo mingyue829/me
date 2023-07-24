@@ -271,20 +271,20 @@ def fast_filler(number_of_words=200) -> str:
     fname = "dict_racey.json"
     if os.path.isfile(fname):
         with open(fname, "r") as inFile:
-            my_dick = json.load(inFile)
+            my_words = json.load(inFile)
     else:
-        my_dick = make_filler_text_dictionary()
+        my_words = make_filler_text_dictionary()
         with open(fname, "w") as outFile:
-            json.dump(my_dick, outFile)
+            json.dump(my_words, outFile)
     words = []
 
     for _ in range(number_of_words):
         word_length = random.randint(3, 6)
         word_index = random.randint(0, 2)
         try:
-            words.append(my_dick[word_length][word_index])
+            words.append(my_words[word_length][word_index])
         except KeyError:
-            words.append(my_dick[str(word_length)][word_index])
+            words.append(my_words[str(word_length)][word_index])
 
     paragraph = " ".join(words)
     paragraph = paragraph[0].upper() + paragraph[1:]
