@@ -1,4 +1,5 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+
+I learnt this week:
 Print() = print anything
 "Hello world" = str
 +stage changes = confirm change (save work)

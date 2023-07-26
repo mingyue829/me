@@ -1,5 +1,6 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+
 += is adding on one
+Leant about while true and else
 while True:
         number = int(input("Enter a number between {} and {}: ".format(low, high)))
         if low <= number <= high:
@@ -7,4 +8,5 @@ while True:
     else:
         print("Number is outside the bounds. Try again.")
 
-<= greater 
+This <= greater or equal than
+This >= smaller ot euqal than
